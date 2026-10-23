@@ -1,0 +1,6 @@
+{
+  "name": "Shopify Furniture Listing Generator",
+  "description": "AI-powered furniture listing generator that turns furniture photos and specs into copy-paste-ready Shopify titles, HTML descriptions, SEO metadata, and alt tags.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
