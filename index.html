@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title>Shopify Furniture Listing Generator</title>
     <meta name="description" content="AI-powered furniture listing generator for e-commerce managers with Shopify-ready HTML descriptions, SEO tags, and alt text." />
     <meta property="og:title" content="Shopify Furniture Listing Generator" />
@@ -47,7 +47,7 @@
         --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px -1px rgba(0, 0, 0, 0.07);
         --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
         --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       }
 
       body {
@@ -70,14 +70,14 @@
       }
 
       .topbar-container {
-        max-width: 1520px;
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 0.75rem 1.25rem;
+        padding: 0.75rem 1rem;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        gap: 1rem;
+        gap: 0.75rem;
       }
 
       .brand {
@@ -87,8 +87,8 @@
       }
 
       .brand-icon {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
         background: linear-gradient(135deg, #008060, #045c46);
         color: #ffffff;
         border-radius: var(--radius-md);
@@ -100,8 +100,8 @@
       }
 
       .brand-icon svg {
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
         fill: none;
         stroke: currentColor;
         stroke-width: 2;
@@ -110,13 +110,14 @@
       }
 
       .brand-text h1 {
-        font-size: 1.125rem;
+        font-size: 1.05rem;
         font-weight: 700;
         letter-spacing: -0.02em;
         color: var(--color-text-main);
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
+        flex-wrap: wrap;
       }
 
       .brand-badge {
@@ -126,111 +127,21 @@
         letter-spacing: 0.05em;
         background: var(--color-primary-light);
         color: var(--color-primary);
-        padding: 0.15rem 0.5rem;
+        padding: 0.15rem 0.45rem;
         border-radius: 9999px;
         border: 1px solid var(--color-primary-border);
       }
 
       .brand-text p {
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
         color: var(--color-text-muted);
       }
 
-      /* API Config Section in Topbar */
       .topbar-actions {
         display: flex;
         align-items: center;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-      }
-
-      .api-pill {
-        display: flex;
-        align-items: center;
-        background: var(--color-surface-subtle);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-md);
-        padding: 0.25rem 0.35rem 0.25rem 0.75rem;
         gap: 0.5rem;
-        font-size: 0.8125rem;
-        transition: border-color 0.15s ease;
-      }
-
-      .api-pill:focus-within {
-        border-color: var(--color-primary);
-        box-shadow: 0 0 0 2px rgba(0, 128, 96, 0.15);
-      }
-
-      .provider-select {
-        background: transparent;
-        border: none;
-        font-size: 0.8125rem;
-        font-weight: 600;
-        color: var(--color-text-main);
-        cursor: pointer;
-        padding-right: 0.5rem;
-        border-right: 1px solid var(--color-border);
-        outline: none;
-      }
-
-      .api-key-input-wrap {
-        display: flex;
-        align-items: center;
-        position: relative;
-      }
-
-      .api-key-input {
-        border: none;
-        background: transparent;
-        font-size: 0.8125rem;
-        font-family: var(--font-mono);
-        color: var(--color-text-main);
-        width: 175px;
-        padding: 0.25rem 0.5rem;
-        outline: none;
-      }
-
-      .api-key-input::placeholder {
-        color: var(--color-text-dim);
-        font-family: var(--font-sans);
-      }
-
-      .icon-btn {
-        background: transparent;
-        border: none;
-        color: var(--color-text-muted);
-        cursor: pointer;
-        padding: 0.35rem;
-        border-radius: var(--radius-sm);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.15s ease;
-      }
-
-      .icon-btn:hover {
-        background: var(--color-surface);
-        color: var(--color-text-main);
-      }
-
-      .key-status {
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-        font-size: 0.75rem;
-        font-weight: 500;
-        padding: 0.2rem 0.5rem;
-        border-radius: var(--radius-sm);
-      }
-
-      .key-status.saved {
-        color: var(--color-success-text);
-        background: var(--color-success-bg);
-      }
-
-      .key-status.empty {
-        color: var(--color-warning-text);
-        background: var(--color-warning-bg);
+        flex-wrap: wrap;
       }
 
       .btn-sample {
@@ -239,9 +150,9 @@
         color: var(--color-text-main);
         font-size: 0.8125rem;
         font-weight: 600;
-        padding: 0.45rem 0.85rem;
+        padding: 0.4rem 0.75rem;
         border-radius: var(--radius-md);
-        display: flex;
+        display: inline-flex;
         align-items: center;
         gap: 0.4rem;
         cursor: pointer;
@@ -253,24 +164,87 @@
         background: var(--color-surface-subtle);
       }
 
-      /* --- Main Container Layout --- */
-      .app-layout {
-        max-width: 1520px;
+      /* Custom API Key Details Toggle */
+      .api-settings-toggle {
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid var(--color-border);
+        padding: 0.4rem 0.65rem;
+        border-radius: var(--radius-md);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+
+      .api-settings-toggle:hover {
+        background: var(--color-surface-subtle);
+        color: var(--color-text-main);
+      }
+
+      .api-settings-drawer {
+        display: none;
+        width: 100%;
+        background: #f8fafc;
+        border-top: 1px solid var(--color-border);
+        padding: 0.75rem 1rem;
+        font-size: 0.8125rem;
+      }
+
+      .api-settings-drawer.open {
+        display: block;
+      }
+
+      .api-drawer-inner {
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 1.5rem 1.25rem 3rem 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .api-pill {
+        display: flex;
+        align-items: center;
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: 0.2rem 0.5rem;
+        gap: 0.5rem;
+      }
+
+      .api-key-input {
+        border: none;
+        background: transparent;
+        font-size: 0.8125rem;
+        font-family: var(--font-mono);
+        color: var(--color-text-main);
+        width: 220px;
+        outline: none;
+      }
+
+      /* --- Main Layout --- */
+      .app-layout {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1.25rem 1rem 3rem 1rem;
         display: grid;
-        grid-template-columns: 460px 1fr;
+        grid-template-columns: 440px 1fr;
         gap: 1.5rem;
         align-items: start;
       }
 
-      @media (max-width: 1080px) {
+      @media (max-width: 980px) {
         .app-layout {
           grid-template-columns: 1fr;
+          padding: 1rem 0.75rem 2.5rem 0.75rem;
+          gap: 1.25rem;
         }
       }
 
-      /* --- Cards & Panels --- */
+      /* --- Cards --- */
       .card {
         background: var(--color-surface);
         border: 1px solid var(--color-border);
@@ -280,7 +254,7 @@
       }
 
       .card-header {
-        padding: 1rem 1.25rem;
+        padding: 0.85rem 1.15rem;
         border-bottom: 1px solid var(--color-border);
         display: flex;
         align-items: center;
@@ -295,16 +269,16 @@
         color: var(--color-text-main);
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.45rem;
       }
 
       .card-subtitle {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         color: var(--color-text-muted);
       }
 
       .card-body {
-        padding: 1.25rem;
+        padding: 1.15rem;
         display: flex;
         flex-direction: column;
         gap: 1.15rem;
@@ -314,7 +288,7 @@
       .form-group {
         display: flex;
         flex-direction: column;
-        gap: 0.4rem;
+        gap: 0.35rem;
       }
 
       .form-label {
@@ -332,21 +306,28 @@
       }
 
       .form-hint {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         color: var(--color-text-muted);
       }
 
+      /* Important: font-size 16px on inputs prevents iOS Safari viewport auto-zoom */
       .input-text, .select-input, .textarea-input {
         width: 100%;
         border: 1px solid var(--color-border);
         border-radius: var(--radius-md);
         background: var(--color-surface);
-        padding: 0.6rem 0.85rem;
-        font-size: 0.875rem;
+        padding: 0.65rem 0.85rem;
+        font-size: 16px;
         color: var(--color-text-main);
         outline: none;
         transition: all 0.15s ease;
         font-family: inherit;
+      }
+
+      @media (min-width: 768px) {
+        .input-text, .select-input, .textarea-input {
+          font-size: 0.875rem;
+        }
       }
 
       .input-text:focus, .select-input:focus, .textarea-input:focus {
@@ -355,13 +336,12 @@
       }
 
       .textarea-input {
-        min-height: 120px;
+        min-height: 110px;
         resize: vertical;
-        line-height: 1.5;
-        font-size: 0.8125rem;
+        line-height: 1.45;
       }
 
-      /* Quick template chips */
+      /* Quick template buttons */
       .quick-chips {
         display: flex;
         flex-wrap: wrap;
@@ -373,14 +353,13 @@
         background: var(--color-surface-subtle);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-sm);
-        padding: 0.2rem 0.5rem;
+        padding: 0.25rem 0.5rem;
         font-size: 0.72rem;
         font-weight: 500;
         color: var(--color-text-muted);
         cursor: pointer;
         display: inline-flex;
         align-items: center;
-        gap: 0.25rem;
         transition: all 0.15s ease;
       }
 
@@ -393,7 +372,7 @@
       .dropzone {
         border: 2px dashed var(--color-border);
         border-radius: var(--radius-md);
-        padding: 1.25rem 1rem;
+        padding: 1.25rem 0.75rem;
         text-align: center;
         background: var(--color-surface-subtle);
         cursor: pointer;
@@ -410,12 +389,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.4rem;
       }
 
       .dropzone-icon {
-        width: 40px;
-        height: 40px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
         background: #ffffff;
         display: flex;
@@ -432,7 +411,7 @@
       }
 
       .dropzone-desc {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         color: var(--color-text-muted);
       }
 
@@ -453,7 +432,7 @@
         border: 1px solid var(--color-border);
         border-radius: var(--radius-md);
         overflow: hidden;
-        background: #111827;
+        background: #0f172a;
       }
 
       .image-preview-card.visible {
@@ -462,7 +441,7 @@
 
       .image-preview-img {
         width: 100%;
-        height: 220px;
+        height: 200px;
         object-fit: cover;
         display: block;
       }
@@ -472,8 +451,8 @@
         bottom: 0;
         left: 0;
         right: 0;
-        padding: 0.6rem 0.85rem;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+        padding: 0.5rem 0.75rem;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -481,15 +460,15 @@
       }
 
       .image-preview-meta {
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         display: flex;
         flex-direction: column;
-        line-height: 1.25;
+        line-height: 1.2;
       }
 
       .image-preview-filename {
         font-weight: 600;
-        max-width: 260px;
+        max-width: 220px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -497,7 +476,7 @@
 
       .image-preview-size {
         font-size: 0.6875rem;
-        color: #cbd5e1;
+        color: #94a3b8;
       }
 
       .btn-remove-image {
@@ -506,20 +485,19 @@
         color: #ffffff;
         font-size: 0.72rem;
         font-weight: 600;
-        padding: 0.3rem 0.6rem;
+        padding: 0.35rem 0.65rem;
         border-radius: var(--radius-sm);
         cursor: pointer;
         display: flex;
         align-items: center;
         gap: 0.25rem;
-        transition: background 0.15s ease;
       }
 
       .btn-remove-image:hover {
         background: #dc2626;
       }
 
-      /* Guardrail Notice Box */
+      /* Guardrails Box */
       .guardrails-box {
         background: #f8fafc;
         border: 1px solid var(--color-border);
@@ -537,7 +515,7 @@
         color: var(--color-text-main);
         display: flex;
         align-items: center;
-        gap: 0.4rem;
+        gap: 0.35rem;
         font-size: 0.75rem;
       }
 
@@ -545,19 +523,18 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 0.2rem;
-        padding-left: 0.25rem;
+        gap: 0.25rem;
       }
 
       .guardrails-list li {
         display: flex;
         align-items: flex-start;
-        gap: 0.4rem;
+        gap: 0.35rem;
       }
 
       .guardrails-list li svg {
-        width: 13px;
-        height: 13px;
+        width: 12px;
+        height: 12px;
         color: var(--color-primary);
         flex-shrink: 0;
         margin-top: 2px;
@@ -569,7 +546,7 @@
         color: #ffffff;
         border: none;
         border-radius: var(--radius-md);
-        font-size: 0.9375rem;
+        font-size: 0.95rem;
         font-weight: 700;
         padding: 0.85rem 1.25rem;
         width: 100%;
@@ -580,19 +557,17 @@
         gap: 0.5rem;
         box-shadow: 0 2px 4px rgba(0, 128, 96, 0.2);
         transition: all 0.2s ease;
+        min-height: 48px; /* Touch target on mobile */
       }
 
       .btn-generate:hover:not(:disabled) {
         background: var(--color-primary-hover);
         transform: translateY(-1px);
-        box-shadow: 0 4px 6px rgba(0, 128, 96, 0.25);
       }
 
       .btn-generate:disabled {
-        opacity: 0.55;
+        opacity: 0.6;
         cursor: not-allowed;
-        transform: none;
-        box-shadow: none;
       }
 
       .btn-generate .spinner {
@@ -609,17 +584,13 @@
         display: inline-block;
       }
 
-      .btn-generate.loading .btn-text-content {
-        opacity: 0.9;
-      }
-
       @keyframes spin {
         to { transform: rotate(360deg); }
       }
 
-      /* --- Error and Status Alerts --- */
+      /* Alert */
       .alert {
-        padding: 0.85rem 1rem;
+        padding: 0.75rem 1rem;
         border-radius: var(--radius-md);
         font-size: 0.8125rem;
         display: none;
@@ -635,13 +606,6 @@
         background: var(--color-error-bg);
         border: 1px solid var(--color-error-border);
         color: var(--color-error-text);
-      }
-
-      .alert-icon {
-        flex-shrink: 0;
-        width: 18px;
-        height: 18px;
-        margin-top: 1px;
       }
 
       .alert-content {
@@ -662,38 +626,34 @@
         border: none;
         color: inherit;
         cursor: pointer;
+        font-size: 1.2rem;
+        line-height: 1;
         opacity: 0.7;
-        padding: 0.2rem;
       }
 
-      .alert-close:hover {
-        opacity: 1;
-      }
-
-      /* --- Right Column: Output Sections --- */
+      /* Outputs Column */
       .output-column {
         display: flex;
         flex-direction: column;
         gap: 1.25rem;
       }
 
-      /* Empty State Placeholder */
       .empty-state {
         background: var(--color-surface);
         border: 2px dashed var(--color-border);
         border-radius: var(--radius-lg);
-        padding: 3.5rem 2rem;
+        padding: 3rem 1.5rem;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.85rem;
       }
 
       .empty-state-icon {
-        width: 64px;
-        height: 64px;
+        width: 56px;
+        height: 56px;
         border-radius: 50%;
         background: var(--color-surface-subtle);
         color: var(--color-primary);
@@ -703,23 +663,18 @@
       }
 
       .empty-state h3 {
-        font-size: 1.125rem;
+        font-size: 1.1rem;
         font-weight: 700;
         color: var(--color-text-main);
       }
 
       .empty-state p {
-        font-size: 0.875rem;
+        font-size: 0.84rem;
         color: var(--color-text-muted);
-        max-width: 440px;
+        max-width: 420px;
         margin: 0 auto;
       }
 
-      .empty-state .quick-try-btn {
-        margin-top: 0.5rem;
-      }
-
-      /* Output Dashboard Container */
       .output-dashboard {
         display: none;
         flex-direction: column;
@@ -730,25 +685,23 @@
         display: flex;
       }
 
-      /* Dashboard Action Bar */
       .dashboard-toolbar {
         background: var(--color-surface);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-lg);
-        padding: 0.85rem 1.25rem;
+        padding: 0.75rem 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 0.75rem;
-        box-shadow: var(--shadow-xs);
+        gap: 0.5rem;
       }
 
       .toolbar-status {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
-        font-size: 0.84rem;
+        gap: 0.45rem;
+        font-size: 0.8125rem;
         font-weight: 600;
         color: var(--color-success-text);
       }
@@ -758,16 +711,9 @@
         height: 8px;
         background: #10b981;
         border-radius: 50%;
-        box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
       }
 
-      .toolbar-buttons {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      /* Output Field Card */
+      /* Output Card */
       .output-card {
         background: var(--color-surface);
         border: 1px solid var(--color-border);
@@ -777,17 +723,18 @@
       }
 
       .output-card-header {
-        padding: 0.75rem 1.15rem;
+        padding: 0.65rem 1rem;
         background: #fafafa;
         border-bottom: 1px solid var(--color-border);
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 0.75rem;
+        gap: 0.5rem;
+        flex-wrap: wrap;
       }
 
       .output-card-title {
-        font-size: 0.8125rem;
+        font-size: 0.78rem;
         font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 0.04em;
@@ -800,28 +747,27 @@
       .output-card-controls {
         display: flex;
         align-items: center;
-        gap: 0.6rem;
+        gap: 0.5rem;
       }
 
-      /* Copy Button */
       .btn-copy {
         background: var(--color-surface);
         border: 1px solid var(--color-border);
         color: var(--color-text-main);
         font-size: 0.75rem;
         font-weight: 600;
-        padding: 0.35rem 0.7rem;
+        padding: 0.35rem 0.65rem;
         border-radius: var(--radius-sm);
         cursor: pointer;
         display: inline-flex;
         align-items: center;
         gap: 0.35rem;
         transition: all 0.15s ease;
+        min-height: 32px;
       }
 
       .btn-copy:hover {
         background: var(--color-surface-subtle);
-        border-color: var(--color-border-hover);
       }
 
       .btn-copy.copied {
@@ -830,20 +776,11 @@
         color: var(--color-success-text);
       }
 
-      .btn-copy svg {
-        width: 14px;
-        height: 14px;
-      }
-
-      /* Character Counter Badges */
       .char-badge {
         font-size: 0.72rem;
         font-weight: 600;
-        padding: 0.2rem 0.5rem;
+        padding: 0.2rem 0.45rem;
         border-radius: 9999px;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
       }
 
       .char-badge.optimal {
@@ -859,23 +796,20 @@
       }
 
       .output-card-body {
-        padding: 1.15rem;
+        padding: 1rem;
       }
 
-      /* Field Specific Content Styling */
       .field-text-box {
-        font-size: 0.9375rem;
+        font-size: 0.9rem;
         color: var(--color-text-main);
-        font-weight: 500;
         line-height: 1.45;
         background: #fbfcfd;
-        padding: 0.75rem 0.9rem;
+        padding: 0.7rem 0.85rem;
         border: 1px solid var(--color-border);
         border-radius: var(--radius-md);
         user-select: all;
       }
 
-      /* Tab Switcher for Description */
       .tab-switcher {
         display: flex;
         background: var(--color-surface-subtle);
@@ -887,13 +821,12 @@
       .tab-btn {
         background: transparent;
         border: none;
-        font-size: 0.75rem;
+        font-size: 0.72rem;
         font-weight: 600;
         color: var(--color-text-muted);
-        padding: 0.35rem 0.75rem;
+        padding: 0.3rem 0.65rem;
         border-radius: var(--radius-sm);
         cursor: pointer;
-        transition: all 0.15s ease;
       }
 
       .tab-btn.active {
@@ -902,59 +835,47 @@
         box-shadow: var(--shadow-xs);
       }
 
-      /* Rendered HTML Preview (Shopify Dawn Theme Look) */
       .rendered-preview {
         background: #ffffff;
         border: 1px solid var(--color-border);
         border-radius: var(--radius-md);
-        padding: 1.5rem;
-        color: #1a1a1a;
-        font-size: 0.9375rem;
-        line-height: 1.65;
+        padding: 1.25rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
       }
 
       .rendered-preview p {
-        margin-bottom: 1rem;
+        margin-bottom: 0.85rem;
       }
 
       .rendered-preview h3 {
-        font-size: 1.0625rem;
+        font-size: 1rem;
         font-weight: 700;
-        margin-top: 1.5rem;
-        margin-bottom: 0.75rem;
-        color: #111827;
-        letter-spacing: -0.01em;
+        margin-top: 1.25rem;
+        margin-bottom: 0.6rem;
       }
 
       .rendered-preview ul {
-        margin-left: 1.25rem;
-        margin-bottom: 1rem;
+        margin-left: 1.2rem;
+        margin-bottom: 0.85rem;
       }
 
       .rendered-preview li {
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.3rem;
       }
 
-      .rendered-preview em {
-        color: var(--color-text-muted);
-        font-size: 0.875rem;
-      }
-
-      /* Raw HTML Code View */
       .raw-html-view {
         display: none;
         background: #0f172a;
         color: #e2e8f0;
         font-family: var(--font-mono);
-        font-size: 0.8125rem;
-        line-height: 1.6;
-        padding: 1.25rem;
+        font-size: 0.8rem;
+        line-height: 1.55;
+        padding: 1rem;
         border-radius: var(--radius-md);
-        overflow-x: auto;
         white-space: pre-wrap;
         word-break: break-all;
-        border: 1px solid #1e293b;
-        max-height: 380px;
+        max-height: 350px;
         overflow-y: auto;
       }
 
@@ -962,32 +883,26 @@
         display: block;
       }
 
-      /* Tags Display */
       .tags-wrap {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
-        align-items: center;
+        gap: 0.4rem;
       }
 
       .tag-badge {
         background: var(--color-surface-subtle);
         border: 1px solid var(--color-border);
         color: var(--color-text-main);
-        font-size: 0.8125rem;
+        font-size: 0.78rem;
         font-weight: 500;
-        padding: 0.3rem 0.65rem;
+        padding: 0.25rem 0.6rem;
         border-radius: var(--radius-sm);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.35rem;
         cursor: pointer;
         transition: all 0.15s ease;
       }
 
       .tag-badge:hover {
         background: #e2e8f0;
-        border-color: var(--color-border-hover);
       }
 
       .tag-badge.special-color {
@@ -996,16 +911,46 @@
         border-color: #fde68a;
       }
 
-      /* Toast notification */
+      /* Google SERP Snippet */
+      .serp-preview {
+        background: #ffffff;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: 0.85rem 1rem;
+        font-family: Arial, sans-serif;
+      }
+
+      .serp-url {
+        font-size: 0.72rem;
+        color: #202124;
+        margin-bottom: 0.2rem;
+      }
+
+      .serp-title {
+        font-size: 1rem;
+        color: #1a0dab;
+        line-height: 1.3;
+        margin-bottom: 0.25rem;
+        word-break: break-word;
+      }
+
+      .serp-desc {
+        font-size: 0.8rem;
+        color: #4d5156;
+        line-height: 1.45;
+        word-break: break-word;
+      }
+
+      /* Toast Notification */
       .toast {
         position: fixed;
-        bottom: 24px;
-        right: 24px;
+        bottom: 20px;
+        right: 20px;
         background: #1e293b;
         color: #ffffff;
         font-size: 0.84rem;
         font-weight: 500;
-        padding: 0.65rem 1.15rem;
+        padding: 0.6rem 1rem;
         border-radius: var(--radius-md);
         box-shadow: var(--shadow-md);
         display: flex;
@@ -1022,47 +967,6 @@
         opacity: 1;
         transform: translateY(0);
       }
-
-      .toast svg {
-        width: 16px;
-        height: 16px;
-        color: #10b981;
-      }
-
-      /* SEO Snippet Preview Card */
-      .serp-preview {
-        background: #ffffff;
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-md);
-        padding: 1rem 1.25rem;
-        font-family: Arial, sans-serif;
-      }
-
-      .serp-url {
-        font-size: 0.75rem;
-        color: #202124;
-        margin-bottom: 0.25rem;
-        display: flex;
-        align-items: center;
-        gap: 0.35rem;
-      }
-
-      .serp-title {
-        font-size: 1.05rem;
-        color: #1a0dab;
-        font-weight: 400;
-        text-decoration: none;
-        line-height: 1.3;
-        margin-bottom: 0.25rem;
-        word-break: break-word;
-      }
-
-      .serp-desc {
-        font-size: 0.8125rem;
-        color: #4d5156;
-        line-height: 1.5;
-        word-break: break-word;
-      }
     </style>
   </head>
   <body>
@@ -1071,7 +975,6 @@
       <div class="topbar-container">
         <div class="brand">
           <div class="brand-icon">
-            <!-- Shopify Armchair Icon -->
             <svg viewBox="0 0 24 24">
               <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3" />
               <path d="M3 11v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v2H7v-2a2 2 0 0 0-4 0z" />
@@ -1082,48 +985,41 @@
           <div class="brand-text">
             <h1>
               Shopify Furniture Listing Generator
-              <span class="brand-badge">E-Commerce AI</span>
+              <span class="brand-badge">Multimodal AI</span>
             </h1>
-            <p>Multimodal listing copywriter with strict guardrails for Shopify stores</p>
+            <p>Conversion-tuned listing copywriter with strict Shopify SEO guardrails</p>
           </div>
         </div>
 
-        <!-- API Configuration Bar -->
         <div class="topbar-actions">
-          <button type="button" class="btn-sample" id="loadSampleBtn" title="Load real furniture sample data to test instantly">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
+          <button type="button" class="btn-sample" id="loadSampleBtn" title="Load sample walnut dining table">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
             Load Sample Furniture
           </button>
+          <button type="button" class="api-settings-toggle" id="toggleApiDrawerBtn" title="Optional API Key configuration">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            API Settings
+          </button>
+        </div>
+      </div>
 
+      <!-- Optional API Settings Drawer -->
+      <div class="api-settings-drawer" id="apiSettingsDrawer">
+        <div class="api-drawer-inner">
+          <span style="font-weight: 600;">AI Engine:</span>
+          <select id="providerSelect" class="select-input" style="width: auto; padding: 0.3rem 0.6rem; font-size: 0.8125rem;">
+            <option value="gemini" selected>Google Gemini (Backend Integrated)</option>
+            <option value="openai">OpenAI (gpt-4o-mini)</option>
+          </select>
           <div class="api-pill">
-            <select id="providerSelect" class="provider-select" title="Choose LLM Provider">
-              <option value="openai">OpenAI (gpt-4o-mini)</option>
-              <option value="gemini">Google Gemini (gemini-2.5-flash)</option>
-            </select>
-            <div class="api-key-input-wrap">
-              <input
-                type="password"
-                id="apiKeyInput"
-                class="api-key-input"
-                placeholder="Paste API Key (sk-... / AIza...)"
-                autocomplete="off"
-                spellcheck="false"
-              />
-              <button type="button" class="icon-btn" id="toggleKeyVisibility" title="Show/Hide Key">
-                <svg id="eyeIcon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                  <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-              </button>
-            </div>
-            <span id="keyStatusBadge" class="key-status empty">No Key</span>
+            <input type="password" id="customApiKeyInput" class="api-key-input" placeholder="Custom API Key (optional)" autocomplete="off" />
           </div>
+          <span class="form-hint">Server Gemini API is enabled by default. Only enter a key if using your own OpenAI or custom Gemini quota.</span>
         </div>
       </div>
     </header>
@@ -1135,13 +1031,13 @@
         <div class="card-header">
           <div>
             <h2 class="card-title">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                 <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
               </svg>
               Product Input
             </h2>
-            <div class="card-subtitle">Supply the raw furniture details & imagery</div>
+            <div class="card-subtitle">Supply furniture details and photo</div>
           </div>
           <button type="button" class="chip-btn" id="resetFormBtn" title="Clear inputs">Reset</button>
         </div>
@@ -1149,14 +1045,9 @@
         <div class="card-body">
           <!-- Error Alert Banner -->
           <div id="errorAlert" class="alert alert-error" role="alert">
-            <svg class="alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
             <div class="alert-content">
               <div class="alert-title" id="errorTitle">Action Required</div>
-              <div class="alert-desc" id="errorDesc">Please check your inputs and API key.</div>
+              <div class="alert-desc" id="errorDesc">Please check your inputs.</div>
             </div>
             <button type="button" class="alert-close" id="dismissAlertBtn" aria-label="Close error">&times;</button>
           </div>
@@ -1183,7 +1074,7 @@
               <span class="form-hint">JPG, PNG, WEBP</span>
             </label>
 
-            <!-- Dropzone (shown when no image selected) -->
+            <!-- Dropzone -->
             <div class="dropzone" id="dropzoneArea">
               <input type="file" id="fileInput" class="file-input-hidden" accept="image/jpeg,image/png,image/webp" />
               <div class="dropzone-content">
@@ -1194,18 +1085,18 @@
                     <polyline points="21 15 16 10 5 21"></polyline>
                   </svg>
                 </div>
-                <div class="dropzone-title">Click to upload or drag & drop</div>
-                <div class="dropzone-desc">High-resolution furniture shot (lifestyle or studio)</div>
+                <div class="dropzone-title">Click to upload or take photo</div>
+                <div class="dropzone-desc">Studio or lifestyle shot of the furniture item</div>
               </div>
             </div>
 
-            <!-- Image Preview Box (shown once image loaded) -->
+            <!-- Image Preview Box -->
             <div class="image-preview-card" id="imagePreviewCard">
               <img id="imagePreviewImg" class="image-preview-img" alt="Uploaded Furniture Preview" />
               <div class="image-preview-overlay">
                 <div class="image-preview-meta">
                   <span id="previewFilename" class="image-preview-filename">furniture.jpg</span>
-                  <span id="previewFileSize" class="image-preview-size">0 KB</span>
+                  <span id="previewFileSize" class="image-preview-size">Optimized</span>
                 </div>
                 <button type="button" class="btn-remove-image" id="removeImageBtn">
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1221,7 +1112,7 @@
           <!-- 3. Key Specifications -->
           <div class="form-group">
             <div class="form-label">
-              <span>Key Specifications <span class="required">*</span></span>
+              <span>Key specifications <span class="required">*</span></span>
               <span class="form-hint">Text is absolute truth</span>
             </div>
             <textarea
@@ -1231,7 +1122,6 @@
               required
             ></textarea>
 
-            <!-- Quick Template Insert Helpers -->
             <div class="quick-chips">
               <span style="font-size: 0.72rem; color: var(--color-text-muted); align-self: center;">+ Insert:</span>
               <button type="button" class="chip-btn" data-template="Dimensions: 30&quot; H x 48&quot; W x 48&quot; D. ">Dimensions</button>
@@ -1245,36 +1135,36 @@
           <!-- 4. Tone Selector -->
           <div class="form-group">
             <label class="form-label" for="toneSelect">
-              <span>Brand Tone & Voice</span>
+              <span>Tone</span>
             </label>
             <select id="toneSelect" class="select-input">
-              <option value="Warm & Editorial" selected>Warm &amp; Editorial (Default - Storytelling &amp; Craft)</option>
-              <option value="Modern & Minimalist">Modern &amp; Minimalist (Clean, Architectural &amp; Direct)</option>
-              <option value="Casual & Family-Friendly">Casual &amp; Family-Friendly (Approachable, Durable &amp; Everyday)</option>
-              <option value="High-End Bespoke / Luxury">High-End Bespoke / Luxury (Heritage, Sophisticated &amp; Refined)</option>
+              <option value="Modern & Minimalist">Modern &amp; Minimalist</option>
+              <option value="Warm & Editorial" selected>Warm &amp; Editorial (Default)</option>
+              <option value="Casual & Family-Friendly">Casual &amp; Family-Friendly</option>
+              <option value="High-End Bespoke / Luxury">High-End Bespoke / Luxury</option>
             </select>
           </div>
 
-          <!-- Active AI Guardrails Indicator -->
+          <!-- Guardrails Notice -->
           <div class="guardrails-box">
             <div class="guardrails-header">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              Active Guardrails Enforced:
+              Strict Guardrails Enforced:
             </div>
             <ul class="guardrails-list">
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Primary Subject Anchor:</strong> Staged accessories flagged with disclaimer.</span>
+                <span><strong>Primary Subject Anchor:</strong> Secondary staging decor flagged as sold separately.</span>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Zero-Assumption Specs:</strong> No hallucinated foam cores or hidden joinery.</span>
+                <span><strong>Zero-Assumption Specs:</strong> Zero hallucinated joinery or internal fills.</span>
               </li>
               <li>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Text-First Colors:</strong> Colorway names override lighting distortions.</span>
+                <span><strong>Text-First Colors:</strong> User-supplied colorway name takes absolute precedence.</span>
               </li>
             </ul>
           </div>
@@ -1282,67 +1172,53 @@
           <!-- 5. Action Button -->
           <button type="button" id="generateBtn" class="btn-generate">
             <span class="spinner"></span>
-            <span class="btn-text-content" id="generateBtnText">Generate Shopify Listing</span>
+            <span id="generateBtnText">Generate Shopify Listing</span>
           </button>
         </div>
       </section>
 
       <!-- Right Column: Outputs Dashboard -->
       <section class="output-column" aria-label="Generated Shopify Listing">
-        <!-- Empty State (before first generation) -->
+        <!-- Empty State -->
         <div id="emptyState" class="empty-state">
           <div class="empty-state-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
               <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
               <line x1="12" y1="22.08" x2="12" y2="12"></line>
             </svg>
           </div>
-          <h3>Ready to Generate Listing</h3>
-          <p>Upload a furniture image, provide basic dimensions and specs, then click "Generate Shopify Listing". The AI will generate conversion-tuned copy and SEO metadata.</p>
-          <button type="button" class="btn-sample quick-try-btn" id="emptyTrySampleBtn">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <h3>Add a product name, image and specs, then generate your listing</h3>
+          <p>Each field will appear here with its own copy button, formatted ready to paste into your Shopify product catalog.</p>
+          <button type="button" class="btn-sample" id="emptyTrySampleBtn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
-            Try With Pre-Loaded Sample
+            Try With Sample Furniture
           </button>
         </div>
 
-        <!-- Generated Dashboard (revealed after generation) -->
+        <!-- Generated Dashboard -->
         <div id="outputDashboard" class="output-dashboard">
-          <!-- Dashboard Top Bar -->
           <div class="dashboard-toolbar">
             <div class="toolbar-status">
               <span class="status-dot"></span>
-              <span>Shopify Fields Ready to Paste</span>
+              <span>Shopify Fields Ready to Copy</span>
             </div>
-            <div class="toolbar-buttons">
-              <button type="button" class="btn-copy" id="copyAllJsonBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                </svg>
-                Copy All (JSON)
-              </button>
-            </div>
+            <button type="button" class="btn-copy" id="copyAllJsonBtn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              </svg>
+              Copy All (JSON)
+            </button>
           </div>
 
           <!-- 1. Suggested Product Title -->
           <div class="output-card">
             <div class="output-card-header">
-              <span class="output-card-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="4 7 4 4 20 4 20 7"></polyline>
-                  <line x1="9" y1="20" x2="15" y2="20"></line>
-                  <line x1="12" y1="4" x2="12" y2="20"></line>
-                </svg>
-                Suggested Product Title
-              </span>
+              <span class="output-card-title">Suggested Product Title</span>
               <button type="button" class="btn-copy" data-target="productTitleVal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
                 Copy Title
               </button>
             </div>
@@ -1351,36 +1227,22 @@
             </div>
           </div>
 
-          <!-- 2. Product Description (HTML & Preview) -->
+          <!-- 2. Product Description -->
           <div class="output-card">
             <div class="output-card-header">
-              <span class="output-card-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                </svg>
-                Product Description (Shopify HTML)
-              </span>
+              <span class="output-card-title">Product Description (Shopify HTML)</span>
               <div class="output-card-controls">
-                <div class="tab-switcher" role="tablist">
-                  <button type="button" class="tab-btn active" id="tabVisualPreview" role="tab">Visual Preview</button>
-                  <button type="button" class="tab-btn" id="tabRawHtml" role="tab">Raw HTML</button>
+                <div class="tab-switcher">
+                  <button type="button" class="tab-btn active" id="tabVisualPreview">Visual Preview</button>
+                  <button type="button" class="tab-btn" id="tabRawHtml">Raw HTML</button>
                 </div>
-                <button type="button" class="btn-copy" id="copyDescriptionBtn" data-target="rawHtmlVal">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
+                <button type="button" class="btn-copy" id="copyDescriptionBtn">
                   Copy HTML
                 </button>
               </div>
             </div>
             <div class="output-card-body">
-              <!-- Visual Rendered Preview -->
               <div id="renderedPreviewVal" class="rendered-preview"></div>
-              <!-- Raw HTML Code Display -->
               <pre id="rawHtmlVal" class="raw-html-view"></pre>
             </div>
           </div>
@@ -1388,22 +1250,10 @@
           <!-- 3. SEO Meta Title -->
           <div class="output-card">
             <div class="output-card-header">
-              <span class="output-card-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                SEO Meta Title
-              </span>
+              <span class="output-card-title">SEO Meta Title</span>
               <div class="output-card-controls">
                 <span id="metaTitleBadge" class="char-badge optimal">0 / 60 chars</span>
-                <button type="button" class="btn-copy" data-target="metaTitleVal">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  Copy
-                </button>
+                <button type="button" class="btn-copy" data-target="metaTitleVal">Copy</button>
               </div>
             </div>
             <div class="output-card-body">
@@ -1414,21 +1264,10 @@
           <!-- 4. SEO Meta Description -->
           <div class="output-card">
             <div class="output-card-header">
-              <span class="output-card-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                </svg>
-                SEO Meta Description
-              </span>
+              <span class="output-card-title">SEO Meta Description</span>
               <div class="output-card-controls">
                 <span id="metaDescBadge" class="char-badge optimal">0 / 160 chars</span>
-                <button type="button" class="btn-copy" data-target="metaDescVal">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  Copy
-                </button>
+                <button type="button" class="btn-copy" data-target="metaDescVal">Copy</button>
               </div>
             </div>
             <div class="output-card-body">
@@ -1436,18 +1275,10 @@
             </div>
           </div>
 
-          <!-- Google SERP Snippet Preview -->
+          <!-- Google Search Preview -->
           <div class="output-card">
             <div class="output-card-header">
-              <span class="output-card-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-                Google Search Result Preview
-              </span>
-              <span class="form-hint">Live search snippet visualization</span>
+              <span class="output-card-title">Google SERP Snippet Preview</span>
             </div>
             <div class="output-card-body">
               <div class="serp-preview">
@@ -1461,23 +1292,10 @@
           <!-- 5. Image Alt Text -->
           <div class="output-card">
             <div class="output-card-header">
-              <span class="output-card-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                  <polyline points="21 15 16 10 5 21"></polyline>
-                </svg>
-                Image Alt Text (Accessibility &amp; SEO)
-              </span>
+              <span class="output-card-title">Image Alt Text (Accessibility &amp; SEO)</span>
               <div class="output-card-controls">
                 <span id="altTextBadge" class="char-badge optimal">0 / 125 chars</span>
-                <button type="button" class="btn-copy" data-target="altTextVal">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  Copy Alt Text
-                </button>
+                <button type="button" class="btn-copy" data-target="altTextVal">Copy Alt Text</button>
               </div>
             </div>
             <div class="output-card-body">
@@ -1488,24 +1306,12 @@
           <!-- 6. Tags -->
           <div class="output-card">
             <div class="output-card-header">
-              <span class="output-card-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
-                </svg>
-                Shopify Tags
-              </span>
-              <button type="button" class="btn-copy" id="copyTagsBtn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-                Copy Comma-Separated
-              </button>
+              <span class="output-card-title">Shopify Tags</span>
+              <button type="button" class="btn-copy" id="copyTagsBtn">Copy Comma-Separated</button>
             </div>
             <div class="output-card-body">
               <div id="tagsContainer" class="tags-wrap"></div>
-              <span class="form-hint" style="margin-top: 0.6rem; display: block;">Click any individual tag to copy it.</span>
+              <span class="form-hint" style="margin-top: 0.5rem; display: block;">Tap any tag to copy individually.</span>
             </div>
           </div>
         </div>
@@ -1514,132 +1320,41 @@
 
     <!-- Floating Copy Toast -->
     <div id="copyToast" class="toast">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
         <path d="M20 6L9 17l-5-5"></path>
       </svg>
       <span id="toastMsg">Copied to clipboard!</span>
     </div>
 
-    <!-- Vanilla JavaScript Application Logic -->
+    <!-- Application Script -->
     <script>
       (function () {
         'use strict';
 
-        // --- Constants & System Guardrails ---
-        const SYSTEM_PROMPT = `You are an expert furniture copywriter and technical Shopify SEO specialist. 
-Your task is to analyze the provided furniture image and user specifications, then output a complete, conversion-optimized Shopify listing.
-
-CRITICAL GUARDRAILS (YOU MUST FOLLOW THESE STRICTLY):
-1. THE PRIMARY SUBJECT ANCHOR RULE:
-   Focus solely on the item explicitly named in the "Target Product Name". If the image is a staged lifestyle scene containing secondary furniture or decor (e.g., rugs, lamps, chairs around a table), treat them strictly as staging accessories. If secondary items are visible, append this exact disclaimer at the end of the HTML description: "<p><em>Note: Staging accessories and additional furniture pictured are sold separately.</em></p>".
-
-2. THE ZERO-ASSUMPTION SPEC RULE:
-   Never invent or assume internal construction details, joinery methods, cushion core fills (e.g., do not guess 'high-resilience foam' or 'down feather'), weight limits, or wood grades. If a spec is not explicitly mentioned in the user's text, omit it or describe the piece using observable visual language only (e.g., "generously padded seating", "slender tapered legs").
-
-3. THE TEXT-FIRST COLOR PRECEDENCE RULE:
-   The user's text input is the absolute truth for colors and finishes. Lighting and filters in images can distort colors (e.g., making cognac look espresso, or green look slate). If the user provides a specific colorway name, use that exact name. If no colorway is provided, describe the color tone generally and add "[Verify Color]" in the tags.
-
-FORMATTING REQUIREMENTS:
-- body_html: Output semantic HTML without inline styles. Use an evocative 2-paragraph lifestyle hook, an <h3>Features & Details</h3> section with a <ul> list, and an <h3>Dimensions & Care</h3> section.
-- meta_title: Under 60 characters. Include primary product type and key aesthetic.
-- meta_description: 145 to 160 characters. Compelling summary ending with a call to action (e.g., "Shop now.").
-- image_alt_text: Under 125 characters. Highly descriptive of the subject, material, and color for accessibility and search crawlers.
-- tags: Array of 5-8 relevant comma-separated tags (style, material, room, category).
-
-RESPONSE FORMAT:
-You MUST respond with a valid, raw JSON object matching this schema exactly (no markdown formatting, no triple backticks):
-{
-  "product_title_suggestion": "string",
-  "body_html": "string",
-  "meta_title": "string",
-  "meta_description": "string",
-  "image_alt_text": "string",
-  "tags": ["string", "string"]
-}`;
-
-        // Sample Data for Instant Testing
         const SAMPLE_DATA = {
           productName: "Aura Solid Walnut Round Dining Table",
           tone: "Warm & Editorial",
-          specs: `Dimensions: 30" H x 48" Dia (comfortably seats 4)
-Materials: 100% Solid American Walnut tabletop; solid walnut sculptural tapered base with brass levelers
-Finish / Colorway: Natural Warm Walnut with clear, low-sheen protective polyurethane matte finish
-Assembly: Minor assembly required (base bolts to tabletop, all hardware & hex key included)
-Care Instructions: Wipe clean with a soft, slightly damp cloth. Use coasters or trivets to protect against heat and moisture. Avoid abrasive chemical cleansers.
-Pictured accessories: Pictured with dining chairs and a wool area rug (sold separately).`,
-          // Realistic high-quality SVG data-uri representing a modern walnut dining table
+          specs: "Dimensions: 30\" H x 48\" Dia (comfortably seats 4)\nMaterials: 100% Solid American Walnut tabletop; solid walnut sculptural tapered base with brass levelers\nFinish / Colorway: Natural Warm Walnut with clear, low-sheen protective polyurethane matte finish\nAssembly: Minor assembly required (base bolts to tabletop, all hardware & hex key included)\nCare Instructions: Wipe clean with a soft, slightly damp cloth. Use coasters or trivets to protect against heat and moisture. Avoid abrasive chemical cleansers.\nPictured accessories: Pictured with dining chairs and a wool area rug (sold separately).",
           imageUri: "data:image/svg+xml;charset=utf-8," + encodeURIComponent(`
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-              <defs>
-                <linearGradient id="wall" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#f5efe6" />
-                  <stop offset="100%" stop-color="#e8ded1" />
-                </linearGradient>
-                <linearGradient id="floor" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#ded3c3" />
-                  <stop offset="100%" stop-color="#cfc2af" />
-                </linearGradient>
-                <linearGradient id="walnutTop" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#694025" />
-                  <stop offset="50%" stop-color="#553018" />
-                  <stop offset="100%" stop-color="#3d1f0d" />
-                </linearGradient>
-                <linearGradient id="walnutEdge" x1="0%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#462410" />
-                  <stop offset="100%" stop-color="#2a1408" />
-                </linearGradient>
-                <linearGradient id="brass" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#c59b27" />
-                  <stop offset="50%" stop-color="#f3d069" />
-                  <stop offset="100%" stop-color="#9a7415" />
-                </linearGradient>
-                <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stop-color="rgba(0,0,0,0.3)" />
-                  <stop offset="100%" stop-color="rgba(0,0,0,0)" />
-                </radialGradient>
-              </defs>
-              <!-- Room Background -->
-              <rect width="800" height="420" fill="url(#wall)" />
-              <rect y="420" width="800" height="180" fill="url(#floor)" />
-              <line x1="0" y1="420" x2="800" y2="420" stroke="#b8aa97" stroke-width="2" />
-              <!-- Staging Rug Shadow -->
-              <ellipse cx="400" cy="485" rx="310" ry="80" fill="#c4b6a1" opacity="0.6" />
-              <!-- Shadow under table -->
-              <ellipse cx="400" cy="500" rx="200" ry="45" fill="url(#shadow)" />
-              <!-- Tapered Base / Legs -->
+              <rect width="800" height="420" fill="#f5efe6" />
+              <rect y="420" width="800" height="180" fill="#ded3c3" />
+              <ellipse cx="400" cy="485" rx="300" ry="70" fill="#c4b6a1" opacity="0.6" />
+              <ellipse cx="400" cy="500" rx="190" ry="40" fill="rgba(0,0,0,0.25)" />
               <polygon points="360,290 320,500 345,503 380,290" fill="#462410" />
               <polygon points="440,290 480,500 455,503 420,290" fill="#381b0a" />
               <polygon points="390,290 395,508 405,508 410,290" fill="#542e17" />
-              <!-- Brass foot caps -->
-              <polygon points="320,490 316,500 345,503 345,493" fill="url(#brass)" />
-              <polygon points="455,493 455,503 484,500 480,490" fill="url(#brass)" />
-              <!-- Tabletop Profile -->
-              <!-- Rim depth -->
-              <ellipse cx="400" cy="285" rx="260" ry="65" fill="url(#walnutEdge)" />
-              <!-- Top surface -->
-              <ellipse cx="400" cy="275" rx="260" ry="65" fill="url(#walnutTop)" />
-              <!-- Walnut grain reflection highlight -->
-              <ellipse cx="380" cy="265" rx="210" ry="45" fill="#7a4b2e" opacity="0.4" />
-              <!-- Label -->
+              <polygon points="320,490 316,500 345,503 345,493" fill="#c59b27" />
+              <polygon points="455,493 455,503 484,500 480,490" fill="#c59b27" />
+              <ellipse cx="400" cy="285" rx="260" ry="65" fill="#462410" />
+              <ellipse cx="400" cy="275" rx="260" ry="65" fill="#694025" />
+              <ellipse cx="380" cy="265" rx="200" ry="40" fill="#7a4b2e" opacity="0.4" />
               <text x="400" y="80" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#8c7a68" letter-spacing="2">MODERN WALNUT DINING TABLE · STUDIO PREVIEW</text>
             </svg>
           `),
           sampleOutput: {
             product_title_suggestion: "Aura Round Walnut Dining Table",
-            body_html: `<p>Anchored by clean mid-century lines and sculptural geometry, the Aura Round Walnut Dining Table creates an intimate gathering space for shared meals and lingering conversations. Thoughtfully proportioned at 48 inches in diameter, this round silhouette effortlessly accommodates four dinner guests while preserving open flow in your dining room or breakfast nook.</p>
-<p>Crafted from authentic solid American walnut, each tabletop highlights the wood's organic character, showcasing rich swirling grain patterns and warm cocoa undertones beneath a protective, low-sheen clear matte lacquer. The tapered architectural base features subtle brass levelers that ensure stability on any flooring surface while lending a bespoke metallic contrast.</p>
-<h3>Features & Details</h3>
-<ul>
-  <li>Crafted from 100% solid American walnut for heirloom longevity</li>
-  <li>Generous 48-inch round tabletop comfortably seats four</li>
-  <li>Sculptural splayed leg base with integrated adjustable brass levelers</li>
-  <li>Low-sheen matte polyurethane finish guards against daily wear</li>
-  <li>Minor assembly required; all hardware and hex tool included</li>
-</ul>
-<h3>Dimensions & Care</h3>
-<p><strong>Dimensions:</strong> 30" H x 48" Diameter</p>
-<p><strong>Care Instructions:</strong> Dust regularly with a clean, dry microfiber cloth. Promptly wipe spills using a damp cloth and mild soap if needed. We recommend the use of coasters and trivets to protect the natural timber from heat and moisture.</p>
-<p><em>Note: Staging accessories and additional furniture pictured are sold separately.</em></p>`,
+            body_html: "<p>Anchored by clean mid-century lines and sculptural geometry, the Aura Round Walnut Dining Table creates an intimate gathering space for shared meals and lingering conversations. Thoughtfully proportioned at 48 inches in diameter, this round silhouette effortlessly accommodates four dinner guests while preserving open flow in your dining room or breakfast nook.</p>\n<p>Crafted from authentic solid American walnut, each tabletop highlights the wood's organic character, showcasing rich swirling grain patterns and warm cocoa undertones beneath a protective, low-sheen clear matte lacquer. The tapered architectural base features subtle brass levelers that ensure stability on any flooring surface while lending a bespoke metallic contrast.</p>\n<h3>Features & Details</h3>\n<ul>\n  <li>Crafted from 100% solid American walnut for heirloom longevity</li>\n  <li>Generous 48-inch round tabletop comfortably seats four</li>\n  <li>Sculptural splayed leg base with integrated adjustable brass levelers</li>\n  <li>Low-sheen matte polyurethane finish guards against daily wear</li>\n  <li>Minor assembly required; all hardware and hex tool included</li>\n</ul>\n<h3>Dimensions & Care</h3>\n<p><strong>Dimensions:</strong> 30\" H x 48\" Diameter</p>\n<p><strong>Care Instructions:</strong> Dust regularly with a clean, dry microfiber cloth. Promptly wipe spills using a damp cloth and mild soap if needed. We recommend the use of coasters and trivets to protect the natural timber from heat and moisture.</p>\n<p><em>Note: Staging accessories and additional furniture pictured are sold separately.</em></p>",
             meta_title: "Aura Round Walnut Dining Table | Mid-Century Dining",
             meta_description: "Crafted from solid American walnut, the Aura 48-inch round dining table seats four with sculptural style and warmth. Shop now for fast home delivery.",
             image_alt_text: "Aura 48-inch round solid walnut dining table featuring sculptural tapered legs and brass feet.",
@@ -1647,24 +1362,18 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
           }
         };
 
-        // --- DOM Elements ---
-        const providerSelect = document.getElementById("providerSelect");
-        const apiKeyInput = document.getElementById("apiKeyInput");
-        const toggleKeyVisibilityBtn = document.getElementById("toggleKeyVisibility");
-        const eyeIcon = document.getElementById("eyeIcon");
-        const keyStatusBadge = document.getElementById("keyStatusBadge");
+        // DOM elements
         const loadSampleBtn = document.getElementById("loadSampleBtn");
         const emptyTrySampleBtn = document.getElementById("emptyTrySampleBtn");
-        const resetFormBtn = document.getElementById("resetFormBtn");
-
-        const errorAlert = document.getElementById("errorAlert");
-        const errorTitle = document.getElementById("errorTitle");
-        const errorDesc = document.getElementById("errorDesc");
-        const dismissAlertBtn = document.getElementById("dismissAlertBtn");
+        const toggleApiDrawerBtn = document.getElementById("toggleApiDrawerBtn");
+        const apiSettingsDrawer = document.getElementById("apiSettingsDrawer");
+        const providerSelect = document.getElementById("providerSelect");
+        const customApiKeyInput = document.getElementById("customApiKeyInput");
 
         const productNameInput = document.getElementById("productNameInput");
         const specificationsInput = document.getElementById("specificationsInput");
         const toneSelect = document.getElementById("toneSelect");
+        const resetFormBtn = document.getElementById("resetFormBtn");
 
         const dropzoneArea = document.getElementById("dropzoneArea");
         const fileInput = document.getElementById("fileInput");
@@ -1676,6 +1385,11 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
 
         const generateBtn = document.getElementById("generateBtn");
         const generateBtnText = document.getElementById("generateBtnText");
+
+        const errorAlert = document.getElementById("errorAlert");
+        const errorTitle = document.getElementById("errorTitle");
+        const errorDesc = document.getElementById("errorDesc");
+        const dismissAlertBtn = document.getElementById("dismissAlertBtn");
 
         const emptyState = document.getElementById("emptyState");
         const outputDashboard = document.getElementById("outputDashboard");
@@ -1704,124 +1418,103 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
         const copyToast = document.getElementById("copyToast");
         const toastMsg = document.getElementById("toastMsg");
 
-        // State Variables
         let currentImageBase64 = null;
-        let currentImageMimeType = "image/jpeg";
-        let currentFilename = "";
         let currentResult = null;
         let toastTimeout = null;
 
-        // --- Local Storage Key Handling ---
-        const STORAGE_KEY_API = "shopify_furniture_api_key";
-        const STORAGE_KEY_PROVIDER = "shopify_furniture_provider";
+        // Toggle API Drawer
+        toggleApiDrawerBtn.addEventListener("click", () => {
+          apiSettingsDrawer.classList.toggle("open");
+        });
 
-        function initApiKey() {
-          const savedKey = localStorage.getItem(STORAGE_KEY_API);
-          const savedProvider = localStorage.getItem(STORAGE_KEY_PROVIDER);
+        // Client-side image optimization via Canvas
+        // Downscales huge 15MB+ iPhone camera photos to clean, lightweight max 1200px JPEG
+        // Prevents Mobile Safari memory exhaustion and prevents DataCloneError
+        function optimizeImageFile(file) {
+          return new Promise(function (resolve, reject) {
+            try {
+              const reader = new FileReader();
+              reader.onload = function (e) {
+                const img = new Image();
+                img.onload = function () {
+                  try {
+                    const maxDim = 1200;
+                    let w = img.width;
+                    let h = img.height;
 
-          if (savedProvider) {
-            providerSelect.value = savedProvider;
-          }
+                    if (w > maxDim || h > maxDim) {
+                      if (w > h) {
+                        h = Math.round((h * maxDim) / w);
+                        w = maxDim;
+                      } else {
+                        w = Math.round((w * maxDim) / h);
+                        h = maxDim;
+                      }
+                    }
 
-          if (savedKey) {
-            apiKeyInput.value = savedKey;
-            updateKeyStatus(true);
-          } else {
-            updateKeyStatus(false);
-          }
-        }
+                    const canvas = document.createElement("canvas");
+                    canvas.width = w;
+                    canvas.height = h;
+                    const ctx = canvas.getContext("2d");
+                    ctx.drawImage(img, 0, 0, w, h);
 
-        function updateKeyStatus(isSaved) {
-          if (isSaved && apiKeyInput.value.trim().length > 0) {
-            keyStatusBadge.textContent = "Key Saved";
-            keyStatusBadge.className = "key-status saved";
-          } else {
-            keyStatusBadge.textContent = "No Key";
-            keyStatusBadge.className = "key-status empty";
-          }
-        }
-
-        apiKeyInput.addEventListener("input", function () {
-          const val = apiKeyInput.value.trim();
-          if (val) {
-            localStorage.setItem(STORAGE_KEY_API, val);
-            // Smart auto-detect provider based on key prefix
-            if (val.startsWith("sk-")) {
-              providerSelect.value = "openai";
-              localStorage.setItem(STORAGE_KEY_PROVIDER, "openai");
-            } else if (val.startsWith("AIza")) {
-              providerSelect.value = "gemini";
-              localStorage.setItem(STORAGE_KEY_PROVIDER, "gemini");
+                    const optimizedDataUrl = canvas.toDataURL("image/jpeg", 0.85);
+                    const approxKb = Math.round((optimizedDataUrl.length * 3) / 4 / 1024);
+                    resolve({
+                      dataUrl: optimizedDataUrl,
+                      filename: file.name,
+                      sizeLabel: approxKb + " KB (Optimized)"
+                    });
+                  } catch (canvasErr) {
+                    // Fallback to raw dataUrl if canvas fails
+                    resolve({
+                      dataUrl: e.target.result,
+                      filename: file.name,
+                      sizeLabel: Math.round(file.size / 1024) + " KB"
+                    });
+                  }
+                };
+                img.onerror = function () {
+                  reject(new Error("Could not decode image format."));
+                };
+                img.src = e.target.result;
+              };
+              reader.onerror = function () {
+                reject(new Error("Failed to read image file."));
+              };
+              reader.readAsDataURL(file);
+            } catch (err) {
+              reject(err);
             }
-            updateKeyStatus(true);
-          } else {
-            localStorage.removeItem(STORAGE_KEY_API);
-            updateKeyStatus(false);
-          }
-        });
+          });
+        }
 
-        providerSelect.addEventListener("change", function () {
-          localStorage.setItem(STORAGE_KEY_PROVIDER, providerSelect.value);
-        });
-
-        toggleKeyVisibilityBtn.addEventListener("click", function () {
-          if (apiKeyInput.type === "password") {
-            apiKeyInput.type = "text";
-            eyeIcon.innerHTML = `
-              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-              <line x1="1" y1="1" x2="23" y2="23"></line>
-            `;
-          } else {
-            apiKeyInput.type = "password";
-            eyeIcon.innerHTML = `
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            `;
-          }
-        });
-
-        // --- File Upload & Drag-and-Drop Handling ---
-        function handleFile(file) {
+        async function processFile(file) {
           if (!file) return;
 
-          if (!file.type.match(/^image\/(jpeg|png|webp)$/)) {
-            showError("Invalid File Format", "Please upload a JPEG, PNG, or WEBP image of the furniture item.");
+          if (!file.type.match(/^image\/(jpeg|png|webp|svg\+xml)$/i) && !file.name.match(/\.(jpg|jpeg|png|webp|svg)$/i)) {
+            showError("Invalid Image Format", "Please select a JPG, PNG, or WEBP image.");
             return;
           }
 
-          if (file.size > 15 * 1024 * 1024) {
-            showError("File Too Large", "Please select an image smaller than 15MB.");
-            return;
-          }
-
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            currentImageBase64 = e.target.result;
-            currentImageMimeType = file.type || "image/jpeg";
-            currentFilename = file.name;
-
-            displayImagePreview(currentImageBase64, file.name, formatBytes(file.size));
+          try {
             clearError();
-          };
+            const result = await optimizeImageFile(file);
+            currentImageBase64 = result.dataUrl;
 
-          reader.onerror = function () {
-            showError("Read Error", "Failed to process image file. Please try again.");
-          };
+            imagePreviewImg.src = result.dataUrl;
+            previewFilename.textContent = result.filename;
+            previewFileSize.textContent = result.sizeLabel;
 
-          reader.readAsDataURL(file);
-        }
-
-        function displayImagePreview(src, name, sizeStr) {
-          imagePreviewImg.src = src;
-          previewFilename.textContent = name;
-          previewFileSize.textContent = sizeStr;
-          dropzoneArea.style.display = "none";
-          imagePreviewCard.classList.add("visible");
+            dropzoneArea.style.display = "none";
+            imagePreviewCard.classList.add("visible");
+          } catch (err) {
+            showError("Image Processing Error", err.message || "Failed to load image.");
+          }
         }
 
         function removeImage() {
           currentImageBase64 = null;
-          currentFilename = "";
           fileInput.value = "";
           imagePreviewImg.src = "";
           imagePreviewCard.classList.remove("visible");
@@ -1832,15 +1525,14 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
 
         fileInput.addEventListener("change", function (e) {
           if (e.target.files && e.target.files[0]) {
-            handleFile(e.target.files[0]);
+            processFile(e.target.files[0]);
           }
         });
 
-        // Drag and drop event listeners
+        // Drag & Drop
         ["dragenter", "dragover"].forEach(evt => {
           dropzoneArea.addEventListener(evt, e => {
             e.preventDefault();
-            e.stopPropagation();
             dropzoneArea.classList.add("dragover");
           });
         });
@@ -1848,7 +1540,6 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
         ["dragleave", "drop"].forEach(evt => {
           dropzoneArea.addEventListener(evt, e => {
             e.preventDefault();
-            e.stopPropagation();
             dropzoneArea.classList.remove("dragover");
           });
         });
@@ -1856,72 +1547,56 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
         dropzoneArea.addEventListener("drop", e => {
           const dt = e.dataTransfer;
           if (dt && dt.files && dt.files[0]) {
-            handleFile(dt.files[0]);
+            processFile(dt.files[0]);
           }
         });
 
-        function formatBytes(bytes) {
-          if (bytes === 0) return "0 Bytes";
-          const k = 1024;
-          const sizes = ["Bytes", "KB", "MB", "GB"];
-          const i = Math.floor(Math.log(bytes) / Math.log(k));
-          return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + " " + sizes[i];
-        }
-
-        // --- Quick Specification Template Chips ---
+        // Quick template chips
         document.querySelectorAll(".chip-btn[data-template]").forEach(btn => {
           btn.addEventListener("click", () => {
             const template = btn.getAttribute("data-template");
-            const current = specificationsInput.value;
-            if (current && !current.endsWith("\n") && !current.endsWith(" ")) {
-              specificationsInput.value = current + "\n" + template;
-            } else {
-              specificationsInput.value = current + template;
-            }
+            const cur = specificationsInput.value;
+            specificationsInput.value = (cur && !cur.endsWith("\n") && !cur.endsWith(" ")) ? cur + "\n" + template : cur + template;
             specificationsInput.focus();
           });
         });
 
-        // --- Load Sample Data ---
-        function loadSampleFurniture() {
+        // Sample Data
+        function loadSample() {
           productNameInput.value = SAMPLE_DATA.productName;
           specificationsInput.value = SAMPLE_DATA.specs;
           toneSelect.value = SAMPLE_DATA.tone;
 
           currentImageBase64 = SAMPLE_DATA.imageUri;
-          currentImageMimeType = "image/svg+xml";
-          currentFilename = "aura-walnut-dining-table.svg";
-          displayImagePreview(currentImageBase64, "aura-walnut-dining-table.svg", "3.8 KB");
+          imagePreviewImg.src = SAMPLE_DATA.imageUri;
+          previewFilename.textContent = "aura-walnut-table.svg";
+          previewFileSize.textContent = "Sample (3.8 KB)";
 
+          dropzoneArea.style.display = "none";
+          imagePreviewCard.classList.add("visible");
           clearError();
-          showToast("Sample furniture data loaded!");
+          showToast("Sample furniture loaded!");
         }
 
-        loadSampleBtn.addEventListener("click", loadSampleFurniture);
+        loadSampleBtn.addEventListener("click", loadSample);
         emptyTrySampleBtn.addEventListener("click", () => {
-          loadSampleFurniture();
-          // If no API key is set, populate sample results directly for instant testing!
-          const apiKey = apiKeyInput.value.trim();
-          if (!apiKey) {
-            renderResults(SAMPLE_DATA.sampleOutput);
-            showToast("Demo listing preview generated!");
-          }
+          loadSample();
+          renderResults(SAMPLE_DATA.sampleOutput);
+          showToast("Sample listing preview rendered!");
         });
 
-        // Reset form
         resetFormBtn.addEventListener("click", () => {
           productNameInput.value = "";
           specificationsInput.value = "";
-          toneSelect.value = "Warm & Editorial";
+          toneSelect.value = "Modern & Minimalist";
           removeImage();
           clearError();
-          showToast("Inputs reset.");
         });
 
-        // --- Error Handling Utilities ---
-        function showError(title, message) {
-          errorTitle.textContent = title;
-          errorDesc.textContent = message;
+        // Error display
+        function showError(title, msg) {
+          errorTitle.textContent = String(title || "Notice");
+          errorDesc.textContent = String(msg || "");
           errorAlert.classList.add("visible");
           errorAlert.scrollIntoView({ behavior: "smooth", block: "nearest" });
         }
@@ -1932,92 +1607,80 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
 
         dismissAlertBtn.addEventListener("click", clearError);
 
-        // --- Toast Feedback ---
+        // Toast
         function showToast(msg) {
           toastMsg.textContent = msg;
           copyToast.classList.add("visible");
           if (toastTimeout) clearTimeout(toastTimeout);
           toastTimeout = setTimeout(() => {
             copyToast.classList.remove("visible");
-          }, 2400);
+          }, 2200);
         }
 
-        // --- Clipboard Helper with Feedback ---
+        // Safe Clipboard Copy (never uses structuredClone)
         async function copyToClipboard(text, btnElement, successMsg = "Copied to clipboard!") {
           try {
-            if (navigator.clipboard && window.isSecureContext) {
-              await navigator.clipboard.writeText(text);
+            const cleanText = String(text || "");
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              await navigator.clipboard.writeText(cleanText);
             } else {
-              // Fallback for non-https or older environments
-              const textArea = document.createElement("textarea");
-              textArea.value = text;
-              textArea.style.position = "fixed";
-              textArea.style.left = "-9999px";
-              document.body.appendChild(textArea);
-              textArea.focus();
-              textArea.select();
+              const ta = document.createElement("textarea");
+              ta.value = cleanText;
+              ta.style.position = "fixed";
+              ta.style.left = "-9999px";
+              document.body.appendChild(ta);
+              ta.focus();
+              ta.select();
               document.execCommand("copy");
-              document.body.removeChild(textArea);
+              document.body.removeChild(ta);
             }
 
             showToast(successMsg);
 
             if (btnElement) {
-              const originalHtml = btnElement.innerHTML;
+              const prev = btnElement.textContent;
               btnElement.classList.add("copied");
-              btnElement.innerHTML = `
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                Copied!
-              `;
+              btnElement.textContent = "Copied!";
               setTimeout(() => {
                 btnElement.classList.remove("copied");
-                btnElement.innerHTML = originalHtml;
-              }, 2000);
+                btnElement.textContent = prev;
+              }, 1800);
             }
           } catch (err) {
-            showError("Copy Error", "Failed to copy text. Please select and copy manually.");
+            showError("Copy Notice", "Please manually select and copy text.");
           }
         }
 
-        // Hook up individual copy buttons
         document.addEventListener("click", function (e) {
           const btn = e.target.closest(".btn-copy");
           if (!btn) return;
-
           const targetId = btn.getAttribute("data-target");
           if (targetId) {
-            const targetEl = document.getElementById(targetId);
-            if (targetEl) {
-              copyToClipboard(targetEl.textContent || targetEl.innerText, btn);
-            }
+            const el = document.getElementById(targetId);
+            if (el) copyToClipboard(el.textContent, btn);
           }
         });
 
-        // Copy Description Button
         copyDescriptionBtn.addEventListener("click", function () {
           if (currentResult && currentResult.body_html) {
             copyToClipboard(currentResult.body_html, copyDescriptionBtn, "Shopify HTML copied!");
           }
         });
 
-        // Copy Tags Button
         copyTagsBtn.addEventListener("click", function () {
           if (currentResult && currentResult.tags) {
-            const tagStr = Array.isArray(currentResult.tags) ? currentResult.tags.join(", ") : currentResult.tags;
-            copyToClipboard(tagStr, copyTagsBtn, "Comma-separated tags copied!");
+            const str = Array.isArray(currentResult.tags) ? currentResult.tags.join(", ") : currentResult.tags;
+            copyToClipboard(str, copyTagsBtn, "Comma-separated tags copied!");
           }
         });
 
-        // Copy All JSON Button
         copyAllJsonBtn.addEventListener("click", function () {
           if (currentResult) {
-            copyToClipboard(JSON.stringify(currentResult, null, 2), copyAllJsonBtn, "Full listing JSON copied!");
+            copyToClipboard(JSON.stringify(currentResult, null, 2), copyAllJsonBtn, "Full JSON copied!");
           }
         });
 
-        // Tab Switcher between Visual Preview and Raw HTML
+        // Tabs
         tabVisualPreview.addEventListener("click", () => {
           tabVisualPreview.classList.add("active");
           tabRawHtml.classList.remove("active");
@@ -2032,53 +1695,34 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
           rawHtmlVal.classList.add("visible");
         });
 
-        // --- Render Listing Results to UI ---
+        // Render Results
         function renderResults(data) {
           currentResult = data;
 
-          // 1. Suggested Product Title
           productTitleVal.textContent = data.product_title_suggestion || "";
-
-          // 2. Product Description (HTML & Preview)
           renderedPreviewVal.innerHTML = data.body_html || "";
           rawHtmlVal.textContent = data.body_html || "";
 
-          // 3. SEO Meta Title + Character counter
           const metaTitle = (data.meta_title || "").trim();
           metaTitleVal.textContent = metaTitle;
-          const metaTitleLen = metaTitle.length;
-          metaTitleBadge.textContent = `${metaTitleLen} / 60 chars`;
-          if (metaTitleLen <= 60 && metaTitleLen >= 30) {
-            metaTitleBadge.className = "char-badge optimal";
-            metaTitleBadge.title = "Optimal length for Google search results";
-          } else {
-            metaTitleBadge.className = "char-badge warning";
-            metaTitleBadge.title = metaTitleLen > 60 ? "Exceeds 60-character target (may be truncated on SERP)" : "A bit short for SEO title";
-          }
+          const titleLen = metaTitle.length;
+          metaTitleBadge.textContent = `${titleLen} / 60 chars`;
+          metaTitleBadge.className = (titleLen <= 60 && titleLen >= 25) ? "char-badge optimal" : "char-badge warning";
           serpTitle.textContent = metaTitle || "Product Title";
 
-          // 4. SEO Meta Description + Character counter
           const metaDesc = (data.meta_description || "").trim();
           metaDescVal.textContent = metaDesc;
-          const metaDescLen = metaDesc.length;
-          metaDescBadge.textContent = `${metaDescLen} / 160 chars`;
-          if (metaDescLen >= 145 && metaDescLen <= 160) {
-            metaDescBadge.className = "char-badge optimal";
-            metaDescBadge.title = "Ideal length (145-160 characters)";
-          } else {
-            metaDescBadge.className = "char-badge warning";
-            metaDescBadge.title = metaDescLen < 145 ? "Under target 145-160 chars" : "Exceeds 160 chars (may be truncated)";
-          }
+          const descLen = metaDesc.length;
+          metaDescBadge.textContent = `${descLen} / 160 chars`;
+          metaDescBadge.className = (descLen >= 145 && descLen <= 160) ? "char-badge optimal" : "char-badge warning";
           serpDesc.textContent = metaDesc || "Meta description snippet will appear here...";
 
-          // 5. Image Alt Text
           const altText = (data.image_alt_text || "").trim();
           altTextVal.textContent = altText;
           const altLen = altText.length;
           altTextBadge.textContent = `${altLen} / 125 chars`;
           altTextBadge.className = altLen <= 125 ? "char-badge optimal" : "char-badge warning";
 
-          // 6. Tags
           tagsContainer.innerHTML = "";
           const tagsList = Array.isArray(data.tags) ? data.tags : (data.tags || "").split(",").map(t => t.trim());
           tagsList.forEach(tag => {
@@ -2089,91 +1733,77 @@ Pictured accessories: Pictured with dining chairs and a wool area rug (sold sepa
               badge.classList.add("special-color");
             }
             badge.textContent = tag;
-            badge.title = "Click to copy this tag";
             badge.addEventListener("click", () => {
               copyToClipboard(tag, null, `Copied tag: "${tag}"`);
             });
             tagsContainer.appendChild(badge);
           });
 
-          // Show Dashboard, hide empty state
           emptyState.style.display = "none";
           outputDashboard.classList.add("visible");
           outputDashboard.scrollIntoView({ behavior: "smooth", block: "start" });
         }
 
-        // --- Multimodal LLM API Dispatch ---
+        // Generate Action
         generateBtn.addEventListener("click", async function () {
           clearError();
 
           const productName = productNameInput.value.trim();
           const specs = specificationsInput.value.trim();
           const tone = toneSelect.value;
-          const apiKey = apiKeyInput.value.trim();
+          const customApiKey = customApiKeyInput.value.trim();
           const provider = providerSelect.value;
 
-          // Input Validations
           if (!productName) {
-            showError("Missing Target Product Name", "Please enter the product name or item type (e.g. Round Walnut Dining Table) to anchor the AI.");
+            showError("Missing Product Name", "Please enter target product name (e.g. Round Walnut Dining Table).");
             productNameInput.focus();
             return;
           }
 
           if (!currentImageBase64) {
-            showError("Missing Furniture Image", "Please upload or drag & drop a furniture image for multimodal analysis.");
+            showError("Missing Image", "Please upload or snap a photo of the furniture item.");
             dropzoneArea.scrollIntoView({ behavior: "smooth" });
             return;
           }
 
           if (!specs) {
-            showError("Missing Specifications", "Please enter key dimensions, materials, and care details.");
+            showError("Missing Specifications", "Please provide key dimensions, materials, or details.");
             specificationsInput.focus();
             return;
           }
 
-          if (!apiKey) {
-            showError("API Key Required", "Please enter your OpenAI or Google Gemini API Key in the top configuration bar. (Or click 'Try With Pre-Loaded Sample' to evaluate demo data).");
-            apiKeyInput.focus();
-            return;
-          }
-
-          // Set Loading State
           setLoading(true);
 
           try {
-            const userContentPrompt = `Target Product Name: ${productName}
-Brand Tone: ${tone}
+            // First attempt: call server backend /api/generate
+            const payload = {
+              productName: productName,
+              specs: specs,
+              tone: tone,
+              imageBase64: currentImageBase64,
+              customApiKey: customApiKey || undefined,
+              provider: provider
+            };
 
-Key Specifications & Details:
-${specs}`;
+            const response = await fetch("/api/generate", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            });
 
-            let parsedJson = null;
-
-            if (provider === "openai") {
-              parsedJson = await callOpenAI(apiKey, userContentPrompt, currentImageBase64);
-            } else {
-              parsedJson = await callGemini(apiKey, userContentPrompt, currentImageBase64);
+            if (!response.ok) {
+              const errBody = await response.json().catch(() => ({}));
+              const errMsg = errBody.error || `Server returned error (${response.status})`;
+              throw new Error(errMsg);
             }
 
-            renderResults(parsedJson);
-            showToast("Shopify listing generated successfully!");
+            const data = await response.json();
+            renderResults(data);
+            showToast("Shopify listing generated!");
           } catch (err) {
-            console.error("Listing generation error:", err);
-            let friendlyTitle = "Generation Failed";
-            let friendlyMessage = err.message || "An unexpected error occurred. Please verify your API key and connection.";
-
-            if (err.status === 401 || err.message.includes("401") || err.message.toLowerCase().includes("invalid api key")) {
-              friendlyTitle = "Invalid API Key (401)";
-              friendlyMessage = "The API key provided was not accepted by the provider. Please verify and re-enter your key.";
-            } else if (err.status === 429 || err.message.includes("429") || err.message.toLowerCase().includes("quota")) {
-              friendlyTitle = "Rate Limit or Quota Exceeded (429)";
-              friendlyMessage = "Your account has reached its rate limit or out-of-quota threshold. Please check your billing/usage status.";
-            } else if (err.name === "TypeError" && err.message.toLowerCase().includes("fetch")) {
-              friendlyTitle = "Network / CORS Error";
-              friendlyMessage = "Network request failed. If running locally via file:///, ensure the provider endpoint allows requests, or run through a local web server.";
-            }
-
-            showError(friendlyTitle, friendlyMessage);
+            console.error("Generate error:", err);
+            const msg = err && err.message ? String(err.message) : "Failed to generate listing.";
+            showError("Generation Error", msg);
           } finally {
             setLoading(false);
           }
@@ -2183,189 +1813,13 @@ ${specs}`;
           if (isLoading) {
             generateBtn.disabled = true;
             generateBtn.classList.add("loading");
-            generateBtnText.textContent = "Analyzing Image & Generating Listing...";
+            generateBtnText.textContent = "Analyzing & Generating Listing...";
           } else {
             generateBtn.disabled = false;
             generateBtn.classList.remove("loading");
             generateBtnText.textContent = "Generate Shopify Listing";
           }
         }
-
-        // --- OpenAI API Caller ---
-        async function callOpenAI(apiKey, userText, dataUrl) {
-          const endpoint = "https://api.openai.com/v1/chat/completions";
-
-          const requestBody = {
-            model: "gpt-4o-mini",
-            response_format: { type: "json_object" },
-            messages: [
-              {
-                role: "system",
-                content: SYSTEM_PROMPT
-              },
-              {
-                role: "user",
-                content: [
-                  {
-                    type: "text",
-                    text: userText
-                  },
-                  {
-                    type: "image_url",
-                    image_url: {
-                      url: dataUrl
-                    }
-                  }
-                ]
-              }
-            ],
-            temperature: 0.4
-          };
-
-          const response = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${apiKey}`
-            },
-            body: JSON.stringify(requestBody)
-          });
-
-          if (!response.ok) {
-            const errData = await response.json().catch(() => ({}));
-            const errMessage = errData.error?.message || `HTTP ${response.status}: ${response.statusText}`;
-            const err = new Error(errMessage);
-            err.status = response.status;
-            throw err;
-          }
-
-          const resData = await response.json();
-          const contentStr = resData.choices?.[0]?.message?.content;
-          if (!contentStr) {
-            throw new Error("Received empty response from OpenAI.");
-          }
-
-          return parseAndValidateJson(contentStr);
-        }
-
-        // --- Google Gemini API Caller ---
-        async function callGemini(apiKey, userText, dataUrl) {
-          // Extract base64 and mime type from dataUrl: data:image/png;base64,iVBOR...
-          let mimeType = "image/jpeg";
-          let base64Data = dataUrl;
-
-          if (dataUrl.startsWith("data:")) {
-            const matches = dataUrl.match(/^data:([^;]+);base64,(.+)$/);
-            if (matches) {
-              mimeType = matches[1];
-              base64Data = matches[2];
-            } else {
-              // In case it's svg or other encoded data
-              const commaIdx = dataUrl.indexOf(",");
-              if (commaIdx !== -1) {
-                const prefix = dataUrl.substring(5, commaIdx);
-                const isBase64 = prefix.includes("base64");
-                const mime = prefix.split(";")[0] || "image/jpeg";
-                mimeType = mime;
-                if (isBase64) {
-                  base64Data = dataUrl.substring(commaIdx + 1);
-                } else {
-                  // Text or svg
-                  base64Data = btoa(decodeURIComponent(dataUrl.substring(commaIdx + 1)));
-                }
-              }
-            }
-          }
-
-          const modelName = "gemini-2.5-flash";
-          const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
-
-          const requestBody = {
-            system_instruction: {
-              parts: [{ text: SYSTEM_PROMPT }]
-            },
-            contents: [
-              {
-                parts: [
-                  {
-                    inline_data: {
-                      mime_type: mimeType,
-                      data: base64Data
-                    }
-                  },
-                  {
-                    text: userText
-                  }
-                ]
-              }
-            ],
-            generationConfig: {
-              response_mime_type: "application/json",
-              temperature: 0.4
-            }
-          };
-
-          const response = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(requestBody)
-          });
-
-          if (!response.ok) {
-            const errData = await response.json().catch(() => ({}));
-            const errMessage = errData.error?.message || `HTTP ${response.status}: ${response.statusText}`;
-            const err = new Error(errMessage);
-            err.status = response.status;
-            throw err;
-          }
-
-          const resData = await response.json();
-          const contentStr = resData.candidates?.[0]?.content?.parts?.[0]?.text;
-          if (!contentStr) {
-            throw new Error("Received empty response from Gemini.");
-          }
-
-          return parseAndValidateJson(contentStr);
-        }
-
-        // --- Robust JSON Parser & Sanitizer ---
-        function parseAndValidateJson(rawStr) {
-          let cleaned = rawStr.trim();
-          // Remove Markdown code fences if present (```json ... ```)
-          if (cleaned.startsWith("```")) {
-            cleaned = cleaned.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
-          }
-
-          let data;
-          try {
-            data = JSON.parse(cleaned);
-          } catch (e) {
-            console.error("Failed to parse JSON directly, attempting recovery:", cleaned);
-            // Attempt to locate outermost { and }
-            const start = cleaned.indexOf("{");
-            const end = cleaned.lastIndexOf("}");
-            if (start !== -1 && end !== -1 && end > start) {
-              data = JSON.parse(cleaned.substring(start, end + 1));
-            } else {
-              throw new Error("AI output was not in valid JSON format. Raw output: " + cleaned.slice(0, 150));
-            }
-          }
-
-          // Normalize keys if slight variation occurs
-          return {
-            product_title_suggestion: data.product_title_suggestion || data.product_title || data.title || "Furniture Product",
-            body_html: data.body_html || data.description_html || data.html || "<p>Product description</p>",
-            meta_title: data.meta_title || data.seo_title || "",
-            meta_description: data.meta_description || data.seo_description || "",
-            image_alt_text: data.image_alt_text || data.alt_text || "",
-            tags: Array.isArray(data.tags) ? data.tags : (typeof data.tags === "string" ? data.tags.split(",") : [])
-          };
-        }
-
-        // --- Initialization ---
-        initApiKey();
       })();
     </script>
   </body>
